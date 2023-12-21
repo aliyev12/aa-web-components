@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      body.light-theme {
+        background-color: white;
+        color: #093c4d;
+      }
+
+      body.dark-theme {
+        background-color: #093c4d;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <aa-theme-switcher></aa-theme-switcher>
+    <no-shadow-component></no-shadow-component>
+    <h2>Buttons</h2>
+    <h3>Primary button</h3>
+    <aa-button></aa-button>
+    <br />
+    <br />
+    <h3>Secondary button</h3>
+    <aa-button secondary><span slot="button-content">Login</span></aa-button>
+    <br />
+    <br />
+    <h3>Disabled button</h3>
+    <aa-button disabled></aa-button>
+    <br />
+    <br />
+    <h3>Hyperlink</h3>
+    <aa-link></aa-link>
+    <br />
+    <br />
+    <h3>Alert Info</h3>
+    <aa-alert info></aa-alert>
+    <br />
+    <br />
+    <h3>Alert Success</h3>
+    <aa-alert success></aa-alert>
+    <br />
+    <br />
+    <h3>Alert Warning</h3>
+    <aa-alert warning></aa-alert>
+    <br />
+    <br />
+    <h3>Alert Error</h3>
+    <aa-alert error></aa-alert>
+    <br />
+    <br />
+    <h3>Card</h3>
+    <aa-card></aa-card>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

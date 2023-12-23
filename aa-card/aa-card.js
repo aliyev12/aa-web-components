@@ -1,5 +1,6 @@
 import { html, styles } from "../utils/index.js";
 import { aaCardStyles } from "./aa-card.styles.js";
+import "../aa-button/aa-button.js";
 
 class AACard extends HTMLElement {
   constructor() {
@@ -14,8 +15,31 @@ class AACard extends HTMLElement {
         ${styles(aaCardStyles)}
       </style>
 
-      <div>card</div>
-      >
+      <div class="aa-card">
+        <div class="image-container">
+          <slot name="card-img"
+            ><div
+              class="card-img"
+              style="background-image: url('/temp/card-img.jpeg')"
+            ></div
+          ></slot>
+        </div>
+        <div class="body-section">
+          <h2>Card title</h2>
+          <div class="body">
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Nibh eget diam ut quis
+              purus non egestas nulla proin.
+            </p>
+          </div>
+        </div>
+        <hr class="separator" />
+        <div class="actions">
+          <aa-button primary
+            ><span slot="button-content">Sign up</span></aa-button
+          >
+        </div>
+      </div>
     `;
   }
 }

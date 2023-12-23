@@ -23,13 +23,21 @@ export const globalStyles = css`
     --radius: 7px;
   }
 
-  :host,
-  :host * {
-    /* STYLES */
+  :host {
     color: var(--dark);
     font-size: 16px;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
+  }
+
+  :host * {
+    box-sizing: inherit;
+  }
+
+  :host > * {
+    color: var(--dark);
+    font-size: inherit;
+    font-family: inherit;
   }
 `;
 

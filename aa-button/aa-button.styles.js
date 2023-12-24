@@ -10,6 +10,9 @@ export const aaButtonStyles = css`
     cursor: pointer;
     transition: background-color 300ms ease-in-out;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   button.aa-button:focus {

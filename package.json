@@ -1,0 +1,16 @@
+{
+  "name": "delete_for_sure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "create": "node cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "commander": "^11.1.0",
+    "fs": "^0.0.1-security"
+  }
+}

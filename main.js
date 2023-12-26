@@ -4,3 +4,4 @@ import "./aa-link/aa-link.js";
 import "./aa-alert/aa-alert.js";
 import "./aa-card/aa-card.js";
 import "./aa-carousel/aa-carousel.js";
+import "./aa-accordion/aa-accordion.js"; // add this import at the bottom

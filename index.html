@@ -25,6 +25,80 @@
   <body>
     <aa-theme-switcher></aa-theme-switcher>
     <no-shadow-component></no-shadow-component>
+
+    <br />
+    <br />
+    <h3>Accordion</h3>
+    <button id="collapse-all-btn">Collapse All</button>
+    <button id="expand-all-btn">Expand All</button>
+    <script>
+      const collapseAllBtn = document.getElementById("collapse-all-btn");
+      const expandAllBtn = document.getElementById("expand-all-btn");
+      if (collapseAllBtn) {
+        collapseAllBtn.addEventListener("click", () => {
+          window.dispatchEvent(
+            new CustomEvent("collapse-all", {
+              bubbles: true,
+              composed: true,
+              detail: "accordion-123",
+            })
+          );
+        });
+      }
+      if (expandAllBtn) {
+        expandAllBtn.addEventListener("click", () => {
+          window.dispatchEvent(
+            new CustomEvent("expand-all", {
+              bubbles: true,
+              composed: true,
+              detail: "accordion-123",
+            })
+          );
+        });
+      }
+    </script>
+    <div style="width: 775px">
+      <aa-accordion name="accordion-123">
+        <aa-accordion-item key="aaa-1" expanded="true">
+          <span slot="title">Title for accordion num 1</span>
+          <div slot="body">
+            111 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Voluptatem quo voluptate explicabo, a magnam quae! Exercitationem
+            laborum quos ex ipsam!
+          </div>
+        </aa-accordion-item>
+        <aa-accordion-item key="bbb-2" expanded="false">
+          <span slot="title">Title for accordion num 2</span>
+          <div slot="body">
+            222 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Voluptatem quo voluptate explicabo, a magnam quae! Exercitationem
+            laborum quos ex ipsam! Exercitationem laborum quos ex ipsam!
+          </div>
+        </aa-accordion-item>
+        <aa-accordion-item key="ccc-3" expanded="false">
+          <span slot="title">Title for accordion num 2</span>
+          <div slot="body">
+            222 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Voluptatem quo voluptate explicabo, a magnam quae! Exercitationem
+            laborum quos ex ipsam! Exercitationem laborum quos ex ipsam!
+          </div>
+        </aa-accordion-item>
+        <aa-accordion-item key="ddd-4" expanded="false">
+          <span slot="title">Title for accordion num 2</span>
+          <div slot="body">
+            222 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Voluptatem quo voluptate explicabo, a magnam quae! Exercitationem
+            laborum quos ex ipsam! Exercitationem laborum quos ex ipsam! a
+            magnam quae! Exercitationem laborum quos ex ipsam! Exercitationem
+            laborum quos ex ipsam!a magnam quae! Exercitationem laborum quos ex
+            ipsam! Exercitationem laborum quos ex ipsam!
+          </div>
+        </aa-accordion-item>
+      </aa-accordion>
+    </div>
+
+    <br />
+    <br />
     <h2>Buttons</h2>
     <h3>Primary button</h3>
     <aa-button></aa-button>

@@ -28,6 +28,7 @@ export const globalStyles = css`
     font-size: 16px;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
+    line-height: 1.9;
   }
 
   :host * {
@@ -38,6 +39,58 @@ export const globalStyles = css`
     color: var(--dark);
     font-size: inherit;
     font-family: inherit;
+    line-height: inherit;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 600;
+    margin: 0;
+    color: var(--dark);
+    line-height: 1.9;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 36px;
+    }
+    h2 {
+      font-size: 28px;
+    }
+    h3 {
+      font-size: 22px;
+    }
+    h4 {
+      font-size: 18px;
+    }
   }
 `;
 

@@ -1,7 +1,6 @@
 import { css } from "./index.js";
 
-export const globalStyles = css`
-  :host {
+const customProperties = `
     /* COLORS */
     --dark: #093c4d;
     --primary: #1fa0c9;
@@ -21,29 +20,47 @@ export const globalStyles = css`
 
     /* OTHER */
     --radius: 7px;
-  }
+`;
 
-  :host {
+const defaultStyles = `
     color: var(--dark);
     font-size: 16px;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     line-height: 1.9;
-  }
+`;
 
-  :host * {
+const defaultStylesForAll = `
     box-sizing: inherit;
-  }
+`;
 
-  :host > * {
+const defaultStylesForDescendants = `
     color: var(--dark);
     font-size: inherit;
     font-family: inherit;
     line-height: inherit;
+`;
+
+export const globalStyles = css`
+  :host {
+    ${customProperties}
+  }
+
+  :host {
+    ${defaultStyles}
+  }
+
+  :host * {
+    ${defaultStylesForAll}
+  }
+
+  :host > * {
+    ${defaultStylesForDescendants}
   }
 
   p {
     margin: 0;
+    color: var(--dark);
   }
 
   h1,
@@ -94,9 +111,35 @@ export const globalStyles = css`
   }
 `;
 
+export const globalNoShadowStyles = (selector) => css`
+  ${selector} {
+    ${customProperties}
+  }
+
+  ${selector} {
+    ${defaultStyles}
+  }
+
+  ${selector} * {
+    ${defaultStylesForAll}
+  }
+
+  ${selector} > * {
+    ${defaultStylesForDescendants}
+  }
+`;
+
 export function styles(customCss) {
   return css`
     ${globalStyles}
+    ${customCss}
+  `;
+}
+
+export function stylesNoShadow(selector, customCss) {
+  return css`
+    ${globalStyles}
+    ${globalNoShadowStyles(selector)}
     ${customCss}
   `;
 }

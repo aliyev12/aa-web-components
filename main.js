@@ -5,3 +5,4 @@ import "./aa-alert/aa-alert.js";
 import "./aa-card/aa-card.js";
 import "./aa-carousel/aa-carousel.js";
 import "./aa-accordion/aa-accordion.js"; // add this import at the bottom
+import "./aa-dialog/aa-dialog.js";

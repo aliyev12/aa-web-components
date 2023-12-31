@@ -59,6 +59,9 @@ export const aaButtonStyles = css`
   .btn-text {
     color: white;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   button.aa-button svg {

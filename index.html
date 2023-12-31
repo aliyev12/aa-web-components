@@ -25,7 +25,24 @@
   <body>
     <aa-theme-switcher></aa-theme-switcher>
     <no-shadow-component></no-shadow-component>
-
+    <h3>Dialog</h3>
+    <button popovertarget="mypopover">Toggle the popover</button>
+    <aa-dialog key="mypopover">
+      <span slot="title">Dialog Title</span>
+      <p slot="body">
+        Lorem ipsum dolor sit amet consectetur. Porta amet aliquam senectus leo
+        porttitor. Lorem ipsum dolor sit amet consectetur. Porta amet aliquam
+        senectus leo porttitor.
+      </p>
+    </aa-dialog>
+    <script>
+      const eventName = `mypopover-primary-btn-clicked`;
+      window.addEventListener(eventName, (e) => {
+        console.log("mypopover-primary-btn-clicked event caught!");
+      });
+    </script>
+    <br />
+    <br />
     <br />
     <br />
     <h3>Accordion</h3>

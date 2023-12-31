@@ -42,8 +42,11 @@ class AAButton extends HTMLElement {
   }
 
   handleButtonClick() {
+    const id = this.getAttribute("id");
     // Dispatch a custom event when the button is clicked
-    this.dispatchEvent(new CustomEvent("button-clicked", { bubbles: true }));
+    this.dispatchEvent(
+      new CustomEvent("button-clicked", { bubbles: true, detail: id })
+    );
   }
 }
 
